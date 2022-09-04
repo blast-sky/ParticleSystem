@@ -1,7 +1,7 @@
 package com.astrog.particlesystem.particle_system.core
 
-import com.astrog.particlesystem.particle_system.utils.Color
-import com.astrog.particlesystem.particle_system.utils.Vector2d
+import com.astrog.particlesystem.particle_system.core.utils.Color
+import com.astrog.particlesystem.particle_system.core.utils.Vector2d
 
 sealed class Particle(
     open var position: Vector2d = Vector2d(),

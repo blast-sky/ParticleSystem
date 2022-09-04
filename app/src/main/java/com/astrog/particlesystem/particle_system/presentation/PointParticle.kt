@@ -13,11 +13,11 @@ import androidx.compose.ui.unit.dp
 import com.astrog.particlesystem.particle_system.core.Particle
 
 @Composable
-fun PointParticle(particle: Particle.Point) {
+fun PointParticle(particle: Particle.Point, modifier: Modifier = Modifier) {
     val density = LocalDensity.current
     with(density) {
         Box(
-            modifier = Modifier
+            modifier = modifier
                 .offset(particle.position.x.toDp(), particle.position.y.toDp())
                 .size(2.dp)
                 .clip(CircleShape)

@@ -13,6 +13,6 @@ fun MainScreen() {
         modifier = Modifier.fillMaxSize(),
         color = Color.Black
     ) {
-        ParticleSystemCanvas()
+        ParticleSystemCanvas(modifier = Modifier.fillMaxSize())
     }
 }

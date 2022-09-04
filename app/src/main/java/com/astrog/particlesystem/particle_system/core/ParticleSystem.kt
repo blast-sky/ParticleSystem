@@ -1,21 +1,22 @@
 package com.astrog.particlesystem.particle_system.core
 
-import android.graphics.RectF
 import com.astrog.particlesystem.particle_system.core.colorizer.Colorizer
 import com.astrog.particlesystem.particle_system.core.emitter.Emitter
 import com.astrog.particlesystem.particle_system.core.lifecycle.LifecycleState
 import com.astrog.particlesystem.particle_system.core.lifecycle.ParticleLifecycle
-import com.astrog.particlesystem.particle_system.utils.Vector2d
+import com.astrog.particlesystem.particle_system.core.spawner.Spawner
+import com.astrog.particlesystem.particle_system.core.utils.Rect
 
 class ParticleSystem(
     private val particleCount: Int,
-//    private val viewRect: RectF,
+    private val viewRect: Rect,
     private val emitter: Emitter,
     private val colorizer: Colorizer,
     private val lifecycle: ParticleLifecycle,
+    private val spawner: Spawner,
 ) {
 
-    val particles = List<Particle>(particleCount) { Particle.Point(Vector2d(10f, 10f)) }
+    val particles = List<Particle>(particleCount) { Particle.Point(spawner.spawn(viewRect)) }
 
     fun update(secDeltaTime: Float) {
         when (lifecycle.getState(secDeltaTime)) {

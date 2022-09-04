@@ -1,4 +1,4 @@
-package com.astrog.particlesystem.particle_system.utils
+package com.astrog.particlesystem.particle_system.core.utils
 
 import kotlin.math.sqrt
 
