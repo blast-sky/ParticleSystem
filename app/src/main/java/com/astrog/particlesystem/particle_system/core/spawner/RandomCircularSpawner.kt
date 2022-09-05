@@ -7,7 +7,7 @@ import kotlin.math.cos
 import kotlin.math.sin
 import kotlin.random.Random
 
-class CircularSpawner(private val radius: Float = 100f) : Spawner {
+class RandomCircularSpawner(private val radius: Float = 100f) : Spawner {
 
     override fun spawn(rect: Rect): Vector2d {
         val angle = Random.nextFloat() * CIRCULAR

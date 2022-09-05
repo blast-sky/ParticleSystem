@@ -2,7 +2,7 @@ package com.astrog.particlesystem.particle_system.core.lifecycle
 
 interface ParticleLifecycle {
 
-    fun getState(deltaTime: Float): LifecycleState
+    fun getState(deltaTimeMillis: Float): LifecycleState
 
 }
 
